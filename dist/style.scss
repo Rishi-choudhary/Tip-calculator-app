@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+// variables
+$strong-cyan : hsl(172, 67%, 45%);  
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan: hsl(186, 14%, 43%);
+$Dark-grayish-cyan-2: hsl(184, 14%, 56%);
+$Light-grayish-cyan: hsl(185, 41%, 84%);
+$Light-rayish-cyan-2: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+$form-inputs:24px;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    background: $Light-grayish-cyan;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.logo{
+    position: absolute; 
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: 80px;
+}
+
+.main{
+    height: 60vh;
+    width: 60vw;
+    background-color: $White;
+    border-radius: 1.5rem;
+    display: flex;
+    padding: 20px;
+    .input,.output{
+        height: 100%;
+        flex-basis: 50%;
+    }
+    .output{
+        border-radius: 1rem;
+        background: $Very-dark-cyan;
+        padding: 2rem 2rem;
+    }
+}
+
+.input{
+    padding: 0.5rem 1rem;
+    .bill{
+        h3{
+            margin-bottom: 5px;
+            color: $Dark-grayish-cyan;
+            font-size: 1rem;
+        }
+      
+        
+    }
+  
+    .bill-input{
+        display: flex;
+        background: $Light-rayish-cyan-2;
+        width: 95%;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        padding: 0 10px;
+        p{
+            color: $Dark-grayish-cyan-2;
+            font-size: 1.3rem;
+            align-self: center;                
+        }   
+        input{
+            width: 100%;
+            border-radius: 0.4rem;
+            height: auto;
+            border: none;
+            background: transparent;
+            text-align: right;
+            padding:0 5px;
+            font-size: 1.3rem;
+            color: $Very-dark-cyan;
+            font-weight: bold;
+            margin:0 5px;
+        }
+        input:focus{
+            outline: none; 
+            border:hsl(183, 100%, 15%) 2px solid;
+        }
+    }
+    .tip{
+        margin: 20px auto;
+        h3{
+            color: $Dark-grayish-cyan;
+            font-size: 1rem;
+        }
+        .tip-options{
+            margin-top: 10px;
+
+            width: 100%;
+            place-items: center;  grid-template-columns: repeat(3, 1fr);
+            
+            display: grid;
+            grid-gap: 10px;
+            .box{
+                width: 7rem;
+                height: 3rem;
+                background: $Very-dark-cyan;
+                display: grid;
+                place-items: center;
+                border-radius: 0.5rem;
+                text-align: center;
+
+                input{
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background: $Light-rayish-cyan-2;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                }
+
+                h3{
+                    font-size: 1.5rem;
+                    color: $White;
+                }
+            }
+        }
+    }
+}
+
+.people{
+    margin: 5px 0;
+    h3{
+        margin-bottom: 5px;
+        color: $Dark-grayish-cyan;
+        font-size: 1rem;
+    }
+}
